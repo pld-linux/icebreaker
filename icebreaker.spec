@@ -5,8 +5,6 @@ Version:	1.09
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
-Group(de):	X11/Applikationen/Spiele
-Group(pl):	X11/Aplikacje/Gry
 Source0:	http://www.mattdm.org/icebreaker/%{name}-%{version}.tgz
 Source1:	%{name}.desktop
 Source2:	%{name}.xpm
