@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://www.mattdm.org/icebreaker/1.9.x/%{name}-%{version}.tgz
+# Source0-md5:	3568ff7e516522182ae9176045d1d125
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://www.mattdm.org/icebreaker/
