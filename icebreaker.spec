@@ -7,7 +7,7 @@ License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://www.mattdm.org/icebreaker/1.9.x/%{name}-%{version}.tgz
 Source1:	%{name}.desktop
-Source2:	%{name}.xpm
+Source2:	%{name}.png
 URL:		http://www.mattdm.org/icebreaker/
 BuildRequires:	SDL_mixer-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -37,10 +37,10 @@ dominacjê nad ¶wiatem.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/icebreaker,/var/games} \
-	$RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Games}
+	$RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Games/Arcade}
 
 install *.wav *.bmp *.ibt $RPM_BUILD_ROOT%{_datadir}/icebreaker
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Arcade
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 install icebreaker $RPM_BUILD_ROOT%{_bindir}
 
@@ -53,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README TODO README.themes
 %attr(2755,root,games) %{_bindir}/*
-%{_applnkdir}/Games/*
+%{_applnkdir}/Games/Arcade/*
 %{_pixmapsdir}/*
 %{_datadir}/icebreaker
 %attr(664,root,games) %config(noreplace) %verify(not size mtime md5) /var/games/icebreaker.scores
