@@ -6,4 +6,5 @@ Comment[pl]=Wciągająca gra zręcznościowo-łamigłówkowa z podskakującymi p
 Exec=icebreaker
 Icon=icebreaker.png
 Terminal=0
+Encoding=UTF-8
 # vi: encoding=utf-8
