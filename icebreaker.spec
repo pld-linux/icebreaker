@@ -2,7 +2,7 @@ Summary:	An addictive action-puzzle game involving bouncing penguins
 Summary(pl):	Wci±gaj±ca gra zrêczno¶ciowo-³amig³ówkowa z pingwinkami
 Name:		icebreaker
 Version:	1.9.8
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://www.mattdm.org/icebreaker/1.9.x/%{name}-%{version}.tgz
@@ -37,10 +37,10 @@ dominacjê nad ¶wiatem.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/icebreaker,/var/games} \
-	$RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Games/Arcade}
+	$RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
 
 install *.wav *.bmp *.ibt $RPM_BUILD_ROOT%{_datadir}/icebreaker
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Arcade
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 install icebreaker $RPM_BUILD_ROOT%{_bindir}
 
@@ -53,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README TODO README.themes
 %attr(2755,root,games) %{_bindir}/*
-%{_applnkdir}/Games/Arcade/*
+%{_desktopdir}/*
 %{_pixmapsdir}/*
 %{_datadir}/icebreaker
 %attr(664,root,games) %config(noreplace) %verify(not size mtime md5) /var/games/icebreaker.scores
