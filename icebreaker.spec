@@ -30,9 +30,9 @@ dominacjê nad ¶wiatem.
 
 %build
 %{__make} CFLAGS="%{rpmcflags} `sdl-config --cflags` \
-             -DDATAPREFIX=\\\"%{_datadir}/icebreaker\\\"\
-	     -DHISCOREPREFIX=\\\"/var/games\\\"" \
-     LDFLAGS="`sdl-config --libs`"
+		-DDATAPREFIX=\\\"%{_datadir}/icebreaker\\\"\
+		-DHISCOREPREFIX=\\\"/var/games\\\"" \
+	LDFLAGS="`sdl-config --libs`"
 
 %install
 rm -rf $RPM_BUILD_ROOT
