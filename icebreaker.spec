@@ -1,11 +1,11 @@
 Summary:	An addictive action-puzzle game involving bouncing penguins
 Summary(pl):	Wci±gaj±ca gra zrêczno¶ciowo-³amig³ówkowa z pingwinkami
 Name:		icebreaker
-Version:	1.09
+Version:	1.9.5
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
-Source0:	http://www.mattdm.org/icebreaker/%{name}-%{version}.tgz
+Source0:	http://www.mattdm.org/icebreaker/1.9.x/%{name}-%{version}.tgz
 Source1:	%{name}.desktop
 Source2:	%{name}.xpm
 URL:		http://www.mattdm.org/icebreaker/
@@ -24,7 +24,7 @@ where they are essential to a secret plot for world domination.
 Hmm... jest ca³a masa pingwinów na górze lodowej na Antarktyce.
 Zosta³e¶ wybrany, aby je z³apaæ, ¿eby mog³y zostaæ dostarczone do
 Finlandii, gdzie s± nieodzowne dla tajnego spisku maj±cego na celu
-dominacjê ¶wiata.
+dominacjê nad ¶wiatem.
 
 %prep
 %setup -q
@@ -41,20 +41,18 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/icebreaker,/var/games}
 install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Games}
 
-install *.wav *.bmp $RPM_BUILD_ROOT%{_datadir}/icebreaker
+install *.wav *.bmp *.ibt $RPM_BUILD_ROOT%{_datadir}/icebreaker
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 install icebreaker $RPM_BUILD_ROOT%{_bindir}
 touch $RPM_BUILD_ROOT/var/games/icebreaker.scores
-
-gzip -9nf ChangeLog README TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc ChangeLog README TODO README.themes
 %attr(2755,root,games) %{_bindir}/*
 %{_applnkdir}/Games/*
 %{_pixmapsdir}/*
