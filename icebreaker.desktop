@@ -4,6 +4,6 @@ Type=Application
 Comment=An addictive action-puzzle game involving bouncing penguins
 Comment[pl]=Wciągająca gra zrÙcznościowo-łamigłówkowa z podskakującymi pingwinkami
 Exec=icebreaker
-Icon=icebreaker.xpm
+Icon=icebreaker.png
 Terminal=0
 # vi: encoding=utf-8
