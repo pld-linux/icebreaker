@@ -47,7 +47,7 @@ install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 install icebreaker $RPM_BUILD_ROOT%{_bindir}
 touch $RPM_BUILD_ROOT/var/games/icebreaker.scores
 
-gzip -9nf ChangeLog README TODO 
+gzip -9nf ChangeLog README TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
