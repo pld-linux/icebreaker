@@ -30,7 +30,7 @@ s± nieodzowne dla tajnego spisku maj±cego na celu dominacjê ¶wiata.
 %setup -q
 
 %build
-make CFLAGS="%{rpmcflags} `sdl-config --cflags` \
+%{__make} CFLAGS="%{rpmcflags} `sdl-config --cflags` \
              -DDATAPREFIX=\\\"%{_datadir}/icebreaker\\\"\
 	     -DHISCOREPREFIX=\\\"/var/games\\\"" \
      LDFLAGS="`sdl-config --libs`"
@@ -44,7 +44,7 @@ install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Games}
 install *.wav *.bmp $RPM_BUILD_ROOT%{_datadir}/icebreaker
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
-install -s icebreaker $RPM_BUILD_ROOT%{_bindir}
+install icebreaker $RPM_BUILD_ROOT%{_bindir}
 touch $RPM_BUILD_ROOT/var/games/icebreaker.scores
 
 gzip -9nf ChangeLog README TODO 
@@ -66,5 +66,8 @@ rm -rf $RPM_BUILD_ROOT
 All persons listed below can be reached at <cvs_login>@pld.org.pl
 
 $Log: icebreaker.spec,v $
-Revision 1.1  2001-07-21 11:00:48  jajcus
+Revision 1.2  2001-08-23 16:51:31  filon
+- changed: make -> %%{__make}
+
+Revision 1.1  2001/07/21 11:00:48  jajcus
 - original spec rewritten in PLD's way
