@@ -2,7 +2,8 @@
 Name=IceBreaker
 Type=Application
 Comment=An addictive action-puzzle game involving bouncing penguins
-Comment[pl]=Wciągająca gra zręcznościowo-łamigłówkowa z podskakującymi pingwinkami
+Comment[pl]=WciÄgajÄca gra zrÄcznoĹciowo-ĹamigĹĂłwkowa z podskakujÄcymi pingwinkami
 Exec=icebreaker
 Icon=icebreaker.xpm
 Terminal=0
+# vi: encoding=utf-8
