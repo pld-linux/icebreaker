@@ -9,7 +9,6 @@ Source0:	http://www.mattdm.org/icebreaker/1.9.x/%{name}-%{version}.tgz
 Source1:	%{name}.desktop
 Source2:	%{name}.xpm
 URL:		http://www.mattdm.org/icebreaker/
-BuildRequires:	SDL-devel
 BuildRequires:	SDL_mixer-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -37,14 +36,14 @@ dominacjê nad ¶wiatem.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/icebreaker,/var/games}
-install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Games}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/icebreaker,/var/games} \
+	$RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Games}
 
 install *.wav *.bmp *.ibt $RPM_BUILD_ROOT%{_datadir}/icebreaker
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 install icebreaker $RPM_BUILD_ROOT%{_bindir}
+
 touch $RPM_BUILD_ROOT/var/games/icebreaker.scores
 
 %clean
