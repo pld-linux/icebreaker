@@ -5,8 +5,9 @@ Version:	1.09
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
+Group(de):	X11/Applikationen/Spiele
 Group(pl):	X11/Aplikacje/Gry
-Source0: 	http://www.mattdm.org/icebreaker/icebreaker-%{version}.tgz
+Source0:	http://www.mattdm.org/icebreaker/%{name}-%{version}.tgz
 Source1:	%{name}.desktop
 Source2:	%{name}.xpm
 URL:		http://www.mattdm.org/icebreaker/
@@ -17,14 +18,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_prefix		/usr/X11R6
 
 %description
-So, uh, there's a bunch of penguins on an iceberg in Antarctica. You have
-been selected to catch them so they can be shipped to Finland, where they
-are essential to a secret plot for world domination.
+So, uh, there's a bunch of penguins on an iceberg in Antarctica. You
+have been selected to catch them so they can be shipped to Finland,
+where they are essential to a secret plot for world domination.
 
 %description -l pl
-Hmm... jest ca³a masa pingwinów na górze lodowej na Antarktyce. Zosta³e¶ 
-wybrany, aby je z³apaæ, ¿eby mog³y zostaæ dostarczone do Finlandii, gdzie
-s± nieodzowne dla tajnego spisku maj±cego na celu dominacjê ¶wiata.
+Hmm... jest ca³a masa pingwinów na górze lodowej na Antarktyce.
+Zosta³e¶ wybrany, aby je z³apaæ, ¿eby mog³y zostaæ dostarczone do
+Finlandii, gdzie s± nieodzowne dla tajnego spisku maj±cego na celu
+dominacjê ¶wiata.
 
 %prep
 %setup -q
@@ -53,21 +55,10 @@ gzip -9nf ChangeLog README TODO
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr (644,root,root,755)
+%defattr(644,root,root,755)
 %doc *.gz
 %attr(2755,root,games) %{_bindir}/*
 %{_applnkdir}/Games/*
 %{_pixmapsdir}/*
 %{_datadir}/icebreaker
 %attr(664,root,games) %config(noreplace) %verify(not size mtime md5) /var/games/icebreaker.scores
-
-%changelog
-* %{date} PLD Team <pld-list@pld.org.pl>
-All persons listed below can be reached at <cvs_login>@pld.org.pl
-
-$Log: icebreaker.spec,v $
-Revision 1.2  2001-08-23 16:51:31  filon
-- changed: make -> %%{__make}
-
-Revision 1.1  2001/07/21 11:00:48  jajcus
-- original spec rewritten in PLD's way
