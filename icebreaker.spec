@@ -56,4 +56,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/*
 %{_pixmapsdir}/*
 %{_datadir}/icebreaker
-%attr(664,root,games) %config(noreplace) %verify(not size mtime md5) /var/games/icebreaker.scores
+%attr(664,root,games) %config(noreplace) %verify(not md5 mtime size) /var/games/icebreaker.scores
