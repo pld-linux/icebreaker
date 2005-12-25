@@ -2,7 +2,7 @@ Summary:	An addictive action-puzzle game involving bouncing penguins
 Summary(pl):	Wci±gaj±ca gra zrêczno¶ciowo-³amig³ówkowa z pingwinkami
 Name:		icebreaker
 Version:	1.9.8
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	http://www.mattdm.org/icebreaker/1.9.x/%{name}-%{version}.tgz
