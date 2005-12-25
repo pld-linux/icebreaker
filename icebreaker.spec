@@ -1,12 +1,12 @@
 Summary:	An addictive action-puzzle game involving bouncing penguins
 Summary(pl):	Wci±gaj±ca gra zrêczno¶ciowo-³amig³ówkowa z pingwinkami
 Name:		icebreaker
-Version:	1.9.8
-Release:	2
-License:	GPL
+Version:	1.2.1
+Release:	1
+License:	GPL v2
 Group:		X11/Applications/Games
-Source0:	http://www.mattdm.org/icebreaker/1.9.x/%{name}-%{version}.tgz
-# Source0-md5:	34fee91bc647a64eec6756eb5602aef8
+Source0:	http://www.mattdm.org/icebreaker/1.2.x/%{name}-%{version}.tgz
+# Source0-md5:	9453119cf3342a8828e4805c0c49be50
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://www.mattdm.org/icebreaker/
@@ -29,7 +29,9 @@ dominacjê nad ¶wiatem.
 %setup -q
 
 %build
-%{__make} CFLAGS="%{rpmcflags} `sdl-config --cflags` \
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} `sdl-config --cflags` \
 		-DDATAPREFIX=\\\"%{_datadir}/icebreaker\\\"\
 		-DHISCOREPREFIX=\\\"/var/games\\\"" \
 	LDFLAGS="`sdl-config --libs`"
@@ -39,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/icebreaker,/var/games} \
 	$RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
 
-install *.wav *.bmp *.ibt $RPM_BUILD_ROOT%{_datadir}/icebreaker
+install *.wav *.bmp $RPM_BUILD_ROOT%{_datadir}/icebreaker
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 install icebreaker $RPM_BUILD_ROOT%{_bindir}
@@ -51,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README TODO README.themes
+%doc ChangeLog README TODO
 %attr(2755,root,games) %{_bindir}/*
 %{_desktopdir}/*
 %{_pixmapsdir}/*
