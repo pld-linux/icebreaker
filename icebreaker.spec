@@ -41,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/icebreaker,/var/games} \
 	$RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
 
-install *.wav *.bmp $RPM_BUILD_ROOT%{_datadir}/icebreaker
+install *.wav *.bmp *.ibt $RPM_BUILD_ROOT%{_datadir}/icebreaker
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 install icebreaker $RPM_BUILD_ROOT%{_bindir}
@@ -53,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README TODO
+%doc ChangeLog README README.themes TODO
 %attr(2755,root,games) %{_bindir}/*
 %{_desktopdir}/*
 %{_pixmapsdir}/*
