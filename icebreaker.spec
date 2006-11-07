@@ -55,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README README.themes TODO
 %attr(2755,root,games) %{_bindir}/*
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
 %{_datadir}/icebreaker
 %attr(664,root,games) %config(noreplace) %verify(not md5 mtime size) /var/games/icebreaker.scores
