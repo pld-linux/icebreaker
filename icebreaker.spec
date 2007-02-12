@@ -1,5 +1,5 @@
 Summary:	An addictive action-puzzle game involving bouncing penguins
-Summary(pl):	Wci±gaj±ca gra zrêczno¶ciowo-³amig³ówkowa z pingwinkami
+Summary(pl.UTF-8):   WciÄ…gajÄ…ca gra zrÄ™cznoÅ›ciowo-Å‚amigÅ‚Ã³wkowa z pingwinkami
 Name:		icebreaker
 Version:	1.9.8
 Release:	2
@@ -19,11 +19,11 @@ So, uh, there's a bunch of penguins on an iceberg in Antarctica. You
 have been selected to catch them so they can be shipped to Finland,
 where they are essential to a secret plot for world domination.
 
-%description -l pl
-Hmm... jest ca³a masa pingwinów na górze lodowej na Antarktyce.
-Zosta³e¶ wybrany, aby je z³apaæ, ¿eby mog³y zostaæ dostarczone do
-Finlandii, gdzie s± nieodzowne dla tajnego spisku maj±cego na celu
-dominacjê nad ¶wiatem.
+%description -l pl.UTF-8
+Hmm... jest caÅ‚a masa pingwinÃ³w na gÃ³rze lodowej na Antarktyce.
+ZostaÅ‚eÅ› wybrany, aby je zÅ‚apaÄ‡, Å¼eby mogÅ‚y zostaÄ‡ dostarczone do
+Finlandii, gdzie sÄ… nieodzowne dla tajnego spisku majÄ…cego na celu
+dominacjÄ™ nad Å›wiatem.
 
 %prep
 %setup -q
