@@ -1,5 +1,5 @@
 Summary:	An addictive action-puzzle game involving bouncing penguins
-Summary(pl.UTF-8):   Wciągająca gra zręcznościowo-łamigłówkowa z pingwinkami
+Summary(pl.UTF-8):	Wciągająca gra zręcznościowo-łamigłówkowa z pingwinkami
 Name:		icebreaker
 Version:	1.9.8
 Release:	2
